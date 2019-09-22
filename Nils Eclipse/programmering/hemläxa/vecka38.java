@@ -14,8 +14,21 @@ public class vecka38 {
 		System.out.println("skriv in ett till heltal");
 		int b =input.nextInt();
 		if(b>max) {
-			
+			max = b;
 		}
+		if (b<min) {
+			min = b;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int c = input.nextInt();
+		if (c>max) {
+			max = c;
+		}
+		if (c<min) {
+			
+		} 
+		
+		
 	}
-
+	
 }
