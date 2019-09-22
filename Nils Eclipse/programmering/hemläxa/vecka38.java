@@ -85,7 +85,7 @@ public class vecka38 {
 		}
 		System.out.println("maxsummer = " + max);
 			
-		System.out.println("minstanummer" + min);
+		System.out.println("minstanummer = " + min);
 	
 		System.out.println("medelvärde = " +((a+b+c+d+e+f+g+h+i+j)/10.f));
 	}
