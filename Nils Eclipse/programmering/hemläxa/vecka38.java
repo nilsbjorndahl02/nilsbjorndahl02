@@ -27,8 +27,61 @@ public class vecka38 {
 		if (c<min) {
 			
 		} 
+		System.out.println("skriv in ett till heltal?");
+		int d = input.nextInt();
+		if (d>max){
+			max = d;
+		}
+		if (d<min) {
+			min= d;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int f = input.nextInt();
+		if (f>max) {
+			max = f;
+		}
+		if (f<min) {
+			min = f;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int g = input.nextInt();
+		if (g>max) {
+			max = g;
+		}
+		if (g<min) {
+			min = g;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int h = input.nextInt();
+		if (h>max) {
+			max = h;
+		}
+		if (h<min) {
+			min = h;
+		}
+		System.out.println ("skriv in ett till heltal?");
+		int i = input.nextInt();
+		if (i>max) {
+			max = i;
+		}
+		if (i<min) {
+			min = i;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int j = input.nextInt();
+		if (j>max) {
+			max = j;
+		}
+		if (j<min) {
+			min = j;
+		}
 		
-		
+	
+	
+	
+	
+	
+	
 	}
 	
 }
