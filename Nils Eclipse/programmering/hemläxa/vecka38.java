@@ -25,7 +25,7 @@ public class vecka38 {
 			max = c;
 		}
 		if (c<min) {
-			
+			min = c;
 		} 
 		System.out.println("skriv in ett till heltal?");
 		int d = input.nextInt();
@@ -34,6 +34,14 @@ public class vecka38 {
 		}
 		if (d<min) {
 			min= d;
+		}
+		System.out.println("skriv in ett till heltal?");
+		int e = input.nextInt();
+		if (e>max) {
+			max = e;
+		}
+		if (e<min) {
+			min = e;
 		}
 		System.out.println("skriv in ett till heltal?");
 		int f = input.nextInt();
@@ -75,13 +83,11 @@ public class vecka38 {
 		if (j<min) {
 			min = j;
 		}
-		
+		System.out.println("maxsummer = " + max);
+			
+		System.out.println("minstanummer" + min);
 	
-	
-	
-	
-	
-	
+		System.out.println("medelvärde = " +((a+b+c+d+e+f+g+h+i+j)/10.f));
 	}
 	
 }
