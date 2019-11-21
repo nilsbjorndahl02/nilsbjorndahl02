@@ -1,11 +1,25 @@
 package enums;
-
+import java.util.Scanner;
 public class uppgift1 {
-
+	
+	static double g_swe = 9.82;
+	static double G = 6.67408*Math.pow(10, -11);
+	static double R = 8.3144621;
+	static double p_0 = 1000;
+	static double c = 299792458;
+	
+		
 public static void main(String[] args) {
 	System.out.println(farenheitToCelsius(50));
+	
 	System.out.println(KelvinToCelsius(0));
+	
+	System.out.println(fluidPressure(FluidTable.WATER, 10));
+	
+	
 	}
+
+
 public static double farenheitToCelsius (double farenheit) {
 		double celsius = ((farenheit - 32)*5)/9;
 		return celsius;
@@ -13,5 +27,13 @@ public static double farenheitToCelsius (double farenheit) {
 public static double KelvinToCelsius (double kelvin) {
 	double celsius = (kelvin-273.15);
 	return celsius;
+}
+public static double fluidPressure(FluidTable fluid, double deep) {
+
+double thePressure = 0;
+thePressure = fluid.density*g_swe*deep;
+
+return thePressure;
+
 }
 }
