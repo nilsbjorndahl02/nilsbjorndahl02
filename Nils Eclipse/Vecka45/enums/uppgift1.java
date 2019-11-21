@@ -16,6 +16,8 @@ public static void main(String[] args) {
 	System.out.println(fluidPressure(FluidTable.WATER, 10));
 	
 	System.out.println(pressureUnderWater(10));
+	
+	System.out.println(kineticEnergy(2,2));
 	}
 
 
@@ -42,7 +44,11 @@ double thePressure1 = FluidTable.WATER.density * g_swe * deep;
 return thePressure1;
 }
 
+public static double kineticEnergy(double mass, double velocity) {
+double KE = 0.5 * mass * Math.pow(velocity, 2);
+return KE;
 
+}
 
 
 
