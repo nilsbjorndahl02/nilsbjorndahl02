@@ -1,5 +1,4 @@
 package enums;
-import java.util.Scanner;
 public class uppgift1 {
 	
 	static double g_swe = 9.82;
@@ -16,7 +15,7 @@ public static void main(String[] args) {
 	
 	System.out.println(fluidPressure(FluidTable.WATER, 10));
 	
-	
+	System.out.println(pressureUnderWater(10));
 	}
 
 
@@ -36,4 +35,31 @@ thePressure = fluid.density*g_swe*deep;
 return thePressure;
 
 }
+
+public static double pressureUnderWater(double deep) {
+double thePressure1 = FluidTable.WATER.density * g_swe * deep;
+
+return thePressure1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
