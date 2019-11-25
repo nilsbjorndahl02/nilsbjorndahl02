@@ -29,6 +29,9 @@ public static void main(String[] args) {
 	
 	System.out.println(volumeToMass(FluidTable.WATER,1));
 	
+	System.out.println(volumeToMassGas(GasTable.AIR,1));
+	
+	
 	}
 
 
@@ -85,7 +88,10 @@ double mass = fluid.density * volume;
 return mass;
 }
 
-
+public static double volumeToMassGas (GasTable gas, double volume) {
+double mass = gas.density * volume;
+return mass;
+}
 
 
 
