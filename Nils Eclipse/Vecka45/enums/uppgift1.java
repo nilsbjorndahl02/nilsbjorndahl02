@@ -21,6 +21,8 @@ public static void main(String[] args) {
 	
 	System.out.println(potentialEnergy(2,5));
 	
+	System.out.println(fallSpeed(2.5));
+	
 	}
 
 
@@ -60,7 +62,12 @@ return ep;
 
 }
 
+public static double fallSpeed(double height) {
 
+double hastighet = Math.sqrt(2*g_swe*height);
+return hastighet;
+
+}
 
 
 
