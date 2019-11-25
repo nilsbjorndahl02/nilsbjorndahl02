@@ -18,6 +18,9 @@ public static void main(String[] args) {
 	System.out.println(pressureUnderWater(10));
 	
 	System.out.println(kineticEnergy(2,2));
+	
+	System.out.println(potentialEnergy(2,5));
+	
 	}
 
 
@@ -50,7 +53,12 @@ return KE;
 
 }
 
+public static double potentialEnergy(double mass, double height) {
 
+double ep = g_swe * mass * height;
+return ep;
+
+}
 
 
 
