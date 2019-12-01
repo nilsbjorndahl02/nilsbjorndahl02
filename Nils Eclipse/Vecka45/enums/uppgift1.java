@@ -93,8 +93,9 @@ double mass = gas.density * volume;
 return mass;
 }
 
+public static double svtVelocity(double distance, double time) {
 
-
+}
 
 
 
