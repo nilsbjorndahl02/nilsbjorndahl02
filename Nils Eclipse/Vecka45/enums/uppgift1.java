@@ -9,29 +9,20 @@ public class uppgift1 {
 	
 		
 public static void main(String[] args) {
+	
 	System.out.println(farenheitToCelsius(50));
-	
 	System.out.println(KelvinToCelsius(0));
-	
 	System.out.println(fluidPressure(FluidTable.WATER, 10));
-	
 	System.out.println(pressureUnderWater(10));
-	
 	System.out.println(kineticEnergy(2,2));
-	
 	System.out.println(potentialEnergy(2,5));
-	
 	System.out.println(fallSpeed(2.5));
-	
 	System.out.println(delta(1,10));
-	
 	System.out.println(delta(5,1));
-	
 	System.out.println(volumeToMass(FluidTable.WATER,1));
-	
 	System.out.println(volumeToMassGas(GasTable.AIR,1));
-	
-	
+	System.out.println(volumeToMass(SolidTable.IRON,1));
+	System.out.println(svtVelocity(10,5));
 	}
 
 
@@ -93,8 +84,14 @@ double mass = gas.density * volume;
 return mass;
 }
 
+public static double volumeToMass(SolidTable solid, double volume) {
+
+return solid.density * volume;
+}
+
 public static double svtVelocity(double distance, double time) {
 
+return distance/time;
 }
 
 
