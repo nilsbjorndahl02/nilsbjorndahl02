@@ -27,6 +27,7 @@ public static void main(String[] args) {
 	System.out.println(svtTime(10,2));
 	System.out.println(work(50,10));
 	System.out.println(power(1000,2));
+	System.out.println(heatSolid(SolidTable.IRON,1,2));
 	}
 
 
@@ -116,9 +117,12 @@ return force * distance;
 public static double power(double work, double time) {
 
 return work/time;
+}
 
+public static double heatSolid(SolidTable solid, double mass, double deltaT) {
 
-
+return solid.heatCapacity * mass * deltaT;
+}
 
 
 
