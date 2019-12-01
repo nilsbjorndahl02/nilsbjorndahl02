@@ -29,6 +29,7 @@ public static void main(String[] args) {
 	System.out.println(power(1000,2));
 	System.out.println(heatSolid(SolidTable.IRON,1,2));
 	System.out.println(heatFluid(FluidTable.WATER,1,10));
+	System.out.println(heatGas(GasTable.AIR,1,1));
 	}
 
 
@@ -130,7 +131,10 @@ public static double heatFluid(FluidTable fluid, double mass, double deltaT) {
 return fluid.heatCapacity * mass * deltaT;
 }
 
+public static double heatGas(GasTable gas, double mass, double deltaT) {
 
+return gas.heatCapacity * mass * deltaT;
+}
 
 
 
