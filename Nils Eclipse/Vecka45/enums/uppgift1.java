@@ -26,6 +26,7 @@ public static void main(String[] args) {
 	System.out.println(svtDistance(10,5));
 	System.out.println(svtTime(10,2));
 	System.out.println(work(50,10));
+	System.out.println(power(1000,2));
 	}
 
 
@@ -112,7 +113,9 @@ public static double work(double force, double distance) {
 return force * distance;
 }
 
+public static double power(double work, double time) {
 
+return work/time;
 
 
 
