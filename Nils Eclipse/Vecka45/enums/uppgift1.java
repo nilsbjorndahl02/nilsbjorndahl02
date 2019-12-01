@@ -23,6 +23,8 @@ public static void main(String[] args) {
 	System.out.println(volumeToMassGas(GasTable.AIR,1));
 	System.out.println(volumeToMass(SolidTable.IRON,1));
 	System.out.println(svtVelocity(10,5));
+	System.out.println(svtDistance(10,5));
+	
 	}
 
 
@@ -94,7 +96,10 @@ public static double svtVelocity(double distance, double time) {
 return distance/time;
 }
 
+public static double svtDistance(double velocity, double time) {
 
+return velocity * time;
+}
 
 
 
