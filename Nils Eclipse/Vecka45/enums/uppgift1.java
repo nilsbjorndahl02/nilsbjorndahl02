@@ -24,6 +24,7 @@ public static void main(String[] args) {
 	System.out.println(volumeToMass(SolidTable.IRON,1));
 	System.out.println(svtVelocity(10,5));
 	System.out.println(svtDistance(10,5));
+	System.out.println(svtTime(10,2));
 	
 	}
 
@@ -101,7 +102,9 @@ public static double svtDistance(double velocity, double time) {
 return velocity * time;
 }
 
+public static double svtTime(double distance, double velocity) {
 
+return distance/velocity;
 
 
 }
