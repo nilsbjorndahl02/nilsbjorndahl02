@@ -28,6 +28,7 @@ public static void main(String[] args) {
 	System.out.println(work(50,10));
 	System.out.println(power(1000,2));
 	System.out.println(heatSolid(SolidTable.IRON,1,2));
+	System.out.println(heatFluid(FluidTable.WATER,1,10));
 	}
 
 
@@ -122,6 +123,11 @@ return work/time;
 public static double heatSolid(SolidTable solid, double mass, double deltaT) {
 
 return solid.heatCapacity * mass * deltaT;
+}
+
+public static double heatFluid(FluidTable fluid, double mass, double deltaT) {
+
+return fluid.heatCapacity * mass * deltaT;
 }
 
 
