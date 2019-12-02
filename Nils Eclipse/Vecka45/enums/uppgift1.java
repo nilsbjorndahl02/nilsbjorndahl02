@@ -35,15 +35,15 @@ public static void main(String[] args) {
 	
 	// 1. How much does 60 dm ^ 3 iron weigh?
 			System.out.println(volumeToMass(SolidTable.IRON, 0.06));
-	// 2. How far will Tomas get if he runs at an average speed of 2.7 m / s for 50
+	// 2. How far will Thomas get if he runs at an average speed of 2.7 m / s for 50
 	// minutes?
 			System.out.println(svtDistance(2.7, 3000));
 			// 3. How much energy is needed to heat 4 liters of water from room temperature
 			// (22 degrees) to the boiling point?
-			System.out.println(heatGas(FluidTable.WATER, 4, 78));
+			System.out.println(heatFluid(FluidTable.WATER, 4, 78));
 			// 4. How big is the total pressure 75 meters below sea level?
 			System.out.println(pressureUnderWater(75));
-			// 5. Tomas, who is 180cm tall, throws up a ball with the mass 250 grams in the
+			// 5. Thomas, who is 180cm tall, throws up a ball with the mass 250 grams in the
 			// air so it gets the take off speed 60 km / h. How high is the ball?
 			System.out.println(velocityToHeight(16.6666666667));
 			// 6. A car with a mass of 735kg accelerates with constant acceleration from
@@ -54,10 +54,21 @@ public static void main(String[] args) {
 			// every time it touches the ground it loses 1% of its energy. How many times
 			// will the ball bounce in the ground before bouncing no more than 0.5 meters?
 			System.out.println(bounceCount(12, 1));
+			// 8. A 13 kilo weight is hanging on a spring which has t as a constant factor
+			// characteristic of the springs stiffness 96N/m. How far the spring is
+			// extended?
+			System.out.println(hookesLawLenght(force(g_swe, 13), 96));
+			
+			// 9. What speed does a rock that weights 1kg have when it hits the ground, if it has a speed of 8 m / s at a height of 5 meters?
+			// When it hit the ground mgh= 0 => m * Math.pow(v, 2)/2. V = (mechanicalEnergy(Em1)*2)
+			System.out.println(velocityMechanicalEnergy_mgh0(mechanicalEnergy(potentialEnergy(1, 9.82, 5), keneticEnergy(1, 8))));
+			// 10. What height was the stone dropped from?
+			//mechanicalEnergy(Em2)= mgh= 9.82 * h. Em1 = Em2 = 61.6 = 9.82 * h <=> 61.6/9.82 = h.
+			System.out.println(heightMechanicalEnergy(mechanicalEnergy(potentialEnergy(1, 9.82, 5), keneticEnergy(1, 8)), 1));
+		}
 	
+
 	
-	
-	}
 
 
 public static double farenheitToCelsius (double farenheit) {
@@ -168,9 +179,72 @@ public static double velocityToHeight(double velocity) {
 return Math.pow(velocity, 2)/ (2*G);
 }
 
+public static double kMpHConvert(double kMpH) {
+	double velocityMpS = kMpH / 3.6;
+	return velocityMpS;
 
+}	
+	public static double bounceCount(double height, double mass) {
+		double potentialEnergy = mass * g_swe * height;
+		int bounceCount = 0;
+		double i = height;
 
+		while (i >= 0.5) {
+			potentialEnergy *= 0.99;
+			i = potentialEnergy / g_swe;
+			bounceCount++;
+		}
 
+		return bounceCount;
+}
 
+	public static double acceleration(double velocityMpS, double time) {
+		double acceleration = velocityMpS / time;
+		return acceleration;
 
+}
+
+	public static double force(double acceleration, double mass) {
+		double force = acceleration * mass;
+		return force;
+	}
+	
+	public static double distance(double time, double acceleration) {
+		double distance = (acceleration * Math.pow(time, 2)) / 2;
+		return distance;
+	}
+
+	public static double mechanicalEnergy(double potentialEnergy, double keneticEnergy) {
+		double mechanicalEnergy = potentialEnergy + keneticEnergy;
+		return mechanicalEnergy;
+		
+	}
+	
+	public static double keneticEnergy(double mass, double velocity) {
+		double keneticEnergy = (mass * Math.pow(velocity, 2))/2;
+		return keneticEnergy;
+	}
+	
+	
+	public static double hookesLawLenght(double force, double springConstant) {
+		//Length = Force(F) / k
+		double lenght = force / springConstant;
+		return lenght;
+	}
+	
+	
+	public static double potentialEnergy(double mass, double g, double height) {
+		double potentialEnergy = mass * g * height;
+		return potentialEnergy;
+	}
+	
+	public static double velocityMechanicalEnergy_mgh0(double mechanicalEnergy) {
+		double velocity = Math.sqrt(mechanicalEnergy * 2);
+		return velocity;
+	}
+	
+	public static double heightMechanicalEnergy(double mechanicalEnergy, double mass) {
+		double height = mechanicalEnergy / (mass * g_swe);
+		return height;
+	}
 }
