@@ -1,4 +1,5 @@
 package enums;
+import java.lang.Math;
 public class uppgift1 {
 	
 	static double g_swe = 9.82;
@@ -31,6 +32,14 @@ public static void main(String[] args) {
 	System.out.println(heatFluid(FluidTable.WATER,1,10));
 	System.out.println(heatGas(GasTable.AIR,1,1));
 	System.out.println(velocityToHeight(9.82));
+	
+	// 1. How much does 60 dm ^ 3 iron weigh?
+			System.out.println(volumeToMass(SolidTable.IRON, 0.06));
+	
+	
+	
+	
+	
 	}
 
 
@@ -139,7 +148,7 @@ return gas.heatCapacity * mass * deltaT;
 
 public static double velocityToHeight(double velocity) {
 
-return Math.pow(velocity, 2)/ (2*g);
+return Math.pow(velocity, 2)/ (2*G);
 }
 
 
