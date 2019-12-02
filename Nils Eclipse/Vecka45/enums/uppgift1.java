@@ -35,8 +35,25 @@ public static void main(String[] args) {
 	
 	// 1. How much does 60 dm ^ 3 iron weigh?
 			System.out.println(volumeToMass(SolidTable.IRON, 0.06));
-	
-	
+	// 2. How far will Tomas get if he runs at an average speed of 2.7 m / s for 50
+	// minutes?
+			System.out.println(svtDistance(2.7, 3000));
+			// 3. How much energy is needed to heat 4 liters of water from room temperature
+			// (22 degrees) to the boiling point?
+			System.out.println(heatGas(FluidTable.WATER, 4, 78));
+			// 4. How big is the total pressure 75 meters below sea level?
+			System.out.println(pressureUnderWater(75));
+			// 5. Tomas, who is 180cm tall, throws up a ball with the mass 250 grams in the
+			// air so it gets the take off speed 60 km / h. How high is the ball?
+			System.out.println(velocityToHeight(16.6666666667));
+			// 6. A car with a mass of 735kg accelerates with constant acceleration from
+			// 0-100 in 4.8 seconds. How much effect has the car's engine achieved?
+			System.out.println(power(work(force(735, acceleration(kMpHConvert(100), 4.8)),
+					distance(4.8, acceleration(kMpHConvert(100), 4.8))), 4.8));
+			// 7. A bouncing ball weighing 1kg is released from a height of 12 meters and
+			// every time it touches the ground it loses 1% of its energy. How many times
+			// will the ball bounce in the ground before bouncing no more than 0.5 meters?
+			System.out.println(bounceCount(12, 1));
 	
 	
 	
